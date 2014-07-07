@@ -16,7 +16,11 @@ public class ConfigurationHandler
     public static void init(File configFile)
     {
         //Create a new Configuration from the configuration file
-        configuration = new Configuration(configFile);
+        if(configuration == null)
+        {
+            configuration = new Configuration(configFile);
+            loadConfiguration();
+        }
     }
 
     @SubscribeEvent
@@ -29,7 +33,7 @@ public class ConfigurationHandler
         }
     }
 
-    public void loadConfiguration()
+    private static void loadConfiguration()
     {
         //Load Values from config
         testValue = configuration.getBoolean("testValue", Configuration.CATEGORY_GENERAL, false, "Example Value");
