@@ -1,5 +1,6 @@
 package com.geodox.minecraft.molecularassembly;
 
+import com.geodox.minecraft.molecularassembly.block.ModBlocks;
 import com.geodox.minecraft.molecularassembly.client.configuration.ConfigurationHandler;
 import com.geodox.minecraft.molecularassembly.item.ModItems;
 import com.geodox.minecraft.molecularassembly.proxy.IProxy;
@@ -34,7 +35,8 @@ public class MolecularAssembly
         ModItems.init();
 
         // Initialize Blocks
-	}
+        ModBlocks.init();
+    }
 	
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)

@@ -1,7 +1,9 @@
 package com.geodox.minecraft.molecularassembly.item;
 
+import com.geodox.minecraft.molecularassembly.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 
+@GameRegistry.ObjectHolder(Reference.ID)
 public class ModItems
 {
 
@@ -9,6 +11,7 @@ public class ModItems
 
     public static void init()
     {
+        //Register Items
         GameRegistry.registerItem(molecularAnalyzer, "molecularAnalyzer");
     }
 

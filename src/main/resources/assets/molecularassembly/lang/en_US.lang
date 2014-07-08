@@ -1,5 +1,8 @@
 # Creative Tab Localizations
 itemGroup.MolecularAssembly=Molecular Assembly
 
-# Item Localizations
+# Item Localizations    item.molecularassembly:itemname.name
 item.molecularassembly:molecularAnalyzer.name=Molecular Analyzer
+
+# Block Localizations   tile.molecularassembly:blockname.name
+tile.molecularassembly:assemblyChamberWall.name=Assembly Chamber Wall
