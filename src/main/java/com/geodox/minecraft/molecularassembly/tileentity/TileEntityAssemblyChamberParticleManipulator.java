@@ -1,12 +1,13 @@
-package com.geodox.minecraft.molecularassembly.multiblock;
+package com.geodox.minecraft.molecularassembly.tileentity;
 
 import com.geodox.minecraft.molecularassembly.block.ModBlocks;
 import com.geodox.minecraft.molecularassembly.utility.DimensionalPattern;
 import com.geodox.minecraft.molecularassembly.utility.LogHelper;
 import net.minecraft.tileentity.TileEntity;
 
-public class MultiBlockAssemblyChamber extends TileEntity
+public class TileEntityAssemblyChamberParticleManipulator extends TileEntity
 {
+
     // TODO: Comment Class
 
     private DimensionalPattern dPattern;
@@ -15,26 +16,32 @@ public class MultiBlockAssemblyChamber extends TileEntity
     private final DimensionalPattern.Row wallWithGlassRow = DimensionalPattern.createRow("#@@@#");
     private final DimensionalPattern.Row wallWithSpaceRow = DimensionalPattern.createRow("#   #");
 
-    public MultiBlockAssemblyChamber()
+    public TileEntityAssemblyChamberParticleManipulator()
     {
         createMultiBlock();
     }
 
     public void isFormed()
     {
+        LogHelper.info("isFormed");
         if(dPattern.hasFormed(worldObj, xCoord, yCoord, zCoord))
         {
             LogHelper.info("Assembly Chamber has Formed!");
+        }
+        else if(!dPattern.hasFormed(worldObj, xCoord, yCoord, zCoord))
+        {
+            LogHelper.info("Converted!");
+            dPattern.convert(worldObj, xCoord, yCoord, zCoord, DimensionalPattern.Flag.IGNORE);
         }
     }
 
     private void createMultiBlock()
     {
-        DimensionalPattern.BlockState wall = new DimensionalPattern.BlockState('#', ModBlocks.assemblyChamberWall, 0);
-        DimensionalPattern.BlockState glass = new DimensionalPattern.BlockState('@', ModBlocks.assemblyChamberWindow, 0);
-        //DimensionalPattern.BlockState table = new DimensionalPattern.BlockState('T', ModBlocks.assemblyChamberTable, 0);
-        DimensionalPattern.BlockState separator = new DimensionalPattern.BlockState('I', ModBlocks.assemblyChamberParticleSeparator, 0);
-        DimensionalPattern.BlockState manipulator = new DimensionalPattern.BlockState('M', ModBlocks.assemblyChamberParticleManipulator, 0);
+        DimensionalPattern.BlockState wall = DimensionalPattern.createBlockState('#', ModBlocks.assemblyChamberWall);
+        DimensionalPattern.BlockState glass = DimensionalPattern.createBlockState('@', ModBlocks.assemblyChamberWindow);
+        //DimensionalPattern.BlockState table = DimensionalPattern.createBlockState('T', ModBlocks.assemblyChamberTable);
+        DimensionalPattern.BlockState separator = DimensionalPattern.createBlockState('I', ModBlocks.assemblyChamberParticleSeparator);
+        DimensionalPattern.BlockState manipulator = DimensionalPattern.createBlockState('M', ModBlocks.assemblyChamberParticleManipulator);
 
         dPattern = DimensionalPattern.createPattern("assemblyChamber", createFirstLayer(), createSecondLayer(), createThirdLayer(), createFourthLayer(), createFifthLayer(), wall, glass, separator, manipulator);
     }
@@ -92,6 +99,12 @@ public class MultiBlockAssemblyChamber extends TileEntity
         DimensionalPattern.Layer fifthLayer = DimensionalPattern.createLayer(wallRow, wallRow, wallRow, wallRow, wallRow);
 
         return fifthLayer;
+    }
+
+    @Override
+    public boolean canUpdate()
+    {
+        return false;
     }
 
 }
