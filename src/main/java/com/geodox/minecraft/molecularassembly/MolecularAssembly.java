@@ -44,6 +44,7 @@ public class MolecularAssembly
 		// Initialize GUI Handler
 
         // Initialize Tile Entities
+        proxy.registerTileEntities();
 
         // Initialize Recipes
 	}

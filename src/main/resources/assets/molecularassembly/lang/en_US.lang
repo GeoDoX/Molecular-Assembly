@@ -6,3 +6,6 @@ item.molecularassembly:molecularAnalyzer.name=Molecular Analyzer
 
 # Block Localizations   tile.molecularassembly:blockname.name
 tile.molecularassembly:assemblyChamberWall.name=Assembly Chamber Wall
+tile.molecularassembly:assemblyChamberParticleManipulator.name=Assembly Chamber Particle Manipulator
+tile.molecularassembly:assemblyChamberParticleSeparator.name=Assembly Chamber Particle Separator
+tile.molecularassembly:assemblyChamberWindow.name=Assembly Chamber Window
