@@ -34,7 +34,8 @@ public class BlockAssemblyChamberParticleManipulator extends BlockMA
         return true;
     }
 
-    public TileEntity createTileEntity()
+    @Override
+    public TileEntity createTileEntity(World world, int metadata)
     {
         return new TileEntityAssemblyChamberParticleManipulator();
     }

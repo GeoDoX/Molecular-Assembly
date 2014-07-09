@@ -24,14 +24,14 @@ public class TileEntityAssemblyChamberParticleManipulator extends TileEntity
     public void isFormed()
     {
         LogHelper.info("isFormed");
-        if(dPattern.hasFormed(worldObj, xCoord, yCoord, zCoord))
+        if(dPattern.hasFormed(worldObj, xCoord - 2, yCoord, zCoord - 2))
         {
             LogHelper.info("Assembly Chamber has Formed!");
         }
-        else if(!dPattern.hasFormed(worldObj, xCoord, yCoord, zCoord))
+        else
         {
             LogHelper.info("Converted!");
-            dPattern.convert(worldObj, xCoord, yCoord, zCoord, DimensionalPattern.Flag.IGNORE);
+            dPattern.convert(worldObj, xCoord - 2, yCoord, zCoord - 2, DimensionalPattern.Flag.IGNORE);
         }
     }
 
@@ -70,7 +70,7 @@ public class TileEntityAssemblyChamberParticleManipulator extends TileEntity
 
     private DimensionalPattern.Layer createThirdLayer()
     {
-        DimensionalPattern.Row thirdLayerRow = DimensionalPattern.createRow("##!##");
+        DimensionalPattern.Row thirdLayerRow = DimensionalPattern.createRow("#####");
         DimensionalPattern.Row thirdLayerRow2 = wallWithSpaceRow;
         DimensionalPattern.Row thirdLayerRow3 = DimensionalPattern.createRow("I   #");
         DimensionalPattern.Row thirdLayerRow4 = wallWithSpaceRow;
