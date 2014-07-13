@@ -1,11 +1,12 @@
 package com.geodox.minecraft.molecularassembly.creativetab;
 
+import com.geodox.minecraft.molecularassembly.block.ModBlocks;
 import com.geodox.minecraft.molecularassembly.reference.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 
-public class CreativeTab
+public class CreativeTabMA
 {
 
     // Create a new Creative Tab for Molecular Assembly
@@ -15,7 +16,13 @@ public class CreativeTab
         @Override
         public Item getTabIconItem()
         {
-            return Item.getItemFromBlock(Blocks.furnace);
+            return Item.getItemFromBlock(ModBlocks.assemblyChamberParticleManipulator);
+        }
+
+        @Override
+        public String getTranslatedTabLabel()
+        {
+            return "Molecular Assembly";
         }
     };
 

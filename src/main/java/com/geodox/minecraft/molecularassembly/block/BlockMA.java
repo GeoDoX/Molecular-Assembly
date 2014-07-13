@@ -1,6 +1,6 @@
 package com.geodox.minecraft.molecularassembly.block;
 
-import com.geodox.minecraft.molecularassembly.creativetab.CreativeTab;
+import com.geodox.minecraft.molecularassembly.creativetab.CreativeTabMA;
 import com.geodox.minecraft.molecularassembly.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -15,12 +15,13 @@ public class BlockMA extends Block
     public BlockMA()
     {
         this(Material.rock);
+        this.setCreativeTab(CreativeTabMA.TAB_MA);
     }
 
     public BlockMA(Material material)
     {
         super(material);
-        this.setCreativeTab(CreativeTab.TAB_MA);
+        this.setCreativeTab(CreativeTabMA.TAB_MA);
     }
 
     @Override

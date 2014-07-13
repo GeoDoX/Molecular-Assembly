@@ -1,6 +1,7 @@
 package com.geodox.minecraft.molecularassembly.block;
 
-import com.geodox.minecraft.molecularassembly.creativetab.CreativeTab;
+import com.geodox.minecraft.molecularassembly.creativetab.CreativeTabMA;
+import com.geodox.minecraft.molecularassembly.reference.Names;
 import net.minecraft.block.material.Material;
 
 public class BlockAssemblyChamberParticleManipulator extends BlockMA
@@ -9,8 +10,7 @@ public class BlockAssemblyChamberParticleManipulator extends BlockMA
     public BlockAssemblyChamberParticleManipulator()
     {
         super(Material.iron);
-        this.setCreativeTab(CreativeTab.TAB_MA);
-        this.setBlockName("assemblyChamberParticleManipulator");
+        this.setBlockName(Names.unlocalizedBlockAssemblyChamberParticleManipulator);
     }
 
 }

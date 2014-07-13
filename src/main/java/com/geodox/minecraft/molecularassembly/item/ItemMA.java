@@ -1,5 +1,6 @@
 package com.geodox.minecraft.molecularassembly.item;
 
+import com.geodox.minecraft.molecularassembly.creativetab.CreativeTabMA;
 import com.geodox.minecraft.molecularassembly.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -13,6 +14,7 @@ public class ItemMA extends Item
     public ItemMA()
     {
         super();
+        this.setCreativeTab(CreativeTabMA.TAB_MA);
     }
 
     @Override
