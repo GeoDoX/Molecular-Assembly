@@ -1,5 +1,6 @@
 package com.geodox.minecraft.molecularassembly.block;
 
+import com.geodox.minecraft.molecularassembly.reference.Names;
 import com.geodox.minecraft.molecularassembly.reference.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -16,10 +17,10 @@ public class ModBlocks
     public static void init()
     {
         //Register Blocks
-        GameRegistry.registerBlock(assemblyChamberWall, "assemblyChamberWall");
-        GameRegistry.registerBlock(assemblyChamberParticleManipulator, "assemblyChamberParticleManipulator");
-        GameRegistry.registerBlock(assemblyChamberParticleSeparator, "assemblyChamberParticleSeparator");
-        GameRegistry.registerBlock(assemblyChamberWindow, "assemblyChamberWindow");
+        GameRegistry.registerBlock(assemblyChamberWall, Names.unlocalizedBlockAssemblyChamberWall);
+        GameRegistry.registerBlock(assemblyChamberParticleManipulator, Names.unlocalizedBlockAssemblyChamberParticleManipulator);
+        GameRegistry.registerBlock(assemblyChamberParticleSeparator, Names.unlocalizedBlockAssemblyChamberParticleSeparator);
+        GameRegistry.registerBlock(assemblyChamberWindow, Names.unlocalizedBlockAssemblyChamberWindow);
     }
 
 }

@@ -10,6 +10,7 @@ public class Names
 
     // Items
     public static final String unlocalizedItemMolecularAnalyzer = "molecularAnalyzer";
+    public static final String unlocalizedItemEnderBucket = "enderBucket";
 
     public static String getUnlocalizedBlockName(String unlocalizedBlockName)
     {

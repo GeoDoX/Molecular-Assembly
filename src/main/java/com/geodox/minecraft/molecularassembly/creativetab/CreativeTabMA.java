@@ -18,12 +18,6 @@ public class CreativeTabMA
         {
             return Item.getItemFromBlock(ModBlocks.assemblyChamberParticleManipulator);
         }
-
-        @Override
-        public String getTranslatedTabLabel()
-        {
-            return "Molecular Assembly";
-        }
     };
 
 }

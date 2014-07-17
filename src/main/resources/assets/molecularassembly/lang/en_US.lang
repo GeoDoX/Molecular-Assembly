@@ -3,6 +3,7 @@ itemGroup.MolecularAssembly=Molecular Assembly
 
 # Item Localizations    item.molecularassembly:itemname.name
 item.molecularassembly:molecularAnalyzer.name=Molecular Analyzer
+item.molecularassembly:enderBucket.name=Ender Bucket
 
 # Block Localizations   tile.molecularassembly:blockname.name
 tile.molecularassembly:assemblyChamberWall.name=Assembly Chamber Wall
